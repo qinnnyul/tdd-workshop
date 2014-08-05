@@ -5,14 +5,19 @@ import com.github.wenhao.tdd.guess.number.domain.Answer;
 import com.github.wenhao.tdd.guess.number.domain.GuessResult;
 import com.github.wenhao.tdd.guess.number.service.Game;
 import com.github.wenhao.tdd.guess.number.view.GameView;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 
 import static com.github.wenhao.tdd.guess.number.domain.AnswerConstant.MAX_TIMES;
 
+@Controller
 public class GameController
 {
     private Game game;
     private GameView gameView;
 
+    @Autowired
     public GameController(Game game, GameView gameView)
     {
         this.game = game;

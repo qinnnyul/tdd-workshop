@@ -1,6 +1,8 @@
 package com.github.wenhao.tdd.guess.number.generator;
 
 import com.google.common.base.Joiner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 import java.util.Set;
@@ -10,10 +12,12 @@ import static com.github.wenhao.tdd.guess.number.domain.AnswerConstant.ANSWER_SE
 import static com.github.wenhao.tdd.guess.number.domain.AnswerConstant.ANSWER_SIZE;
 import static com.google.common.collect.Sets.newHashSet;
 
+@Component
 public class RandomIntGenerator
 {
     private Random random;
 
+    @Autowired
     public RandomIntGenerator(Random random)
     {
         this.random = random;

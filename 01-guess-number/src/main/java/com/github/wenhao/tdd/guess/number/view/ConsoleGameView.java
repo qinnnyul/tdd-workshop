@@ -1,9 +1,11 @@
 package com.github.wenhao.tdd.guess.number.view;
 
 import com.github.wenhao.tdd.guess.number.domain.GuessResult;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ConsoleGameView implements GameView
 {
     @Override

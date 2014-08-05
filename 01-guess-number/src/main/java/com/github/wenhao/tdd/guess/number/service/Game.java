@@ -3,16 +3,20 @@ package com.github.wenhao.tdd.guess.number.service;
 import com.github.wenhao.tdd.guess.number.domain.Answer;
 import com.github.wenhao.tdd.guess.number.domain.GuessResult;
 import com.github.wenhao.tdd.guess.number.generator.AnswerGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 import static com.google.common.collect.Lists.newArrayList;
 
+@Service
 public class Game
 {
     private Answer answer;
     private List<GuessResult> guessResults;
 
+    @Autowired
     public Game(AnswerGenerator answerGenerator)
     {
         this.answer = answerGenerator.generate();

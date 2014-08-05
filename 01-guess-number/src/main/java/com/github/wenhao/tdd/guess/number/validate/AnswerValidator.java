@@ -4,6 +4,7 @@ import com.github.wenhao.tdd.guess.number.domain.Answer;
 import com.github.wenhao.tdd.guess.number.exception.AnswerLengthInvalidException;
 import com.github.wenhao.tdd.guess.number.exception.AnswerOutOfRangeException;
 import com.google.common.base.Predicate;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import static com.github.wenhao.tdd.guess.number.domain.AnswerConstant.ANSWER_SI
 import static com.google.common.collect.Iterators.all;
 import static com.google.common.collect.Lists.newArrayList;
 
+@Component
 public class AnswerValidator
 {
     public Boolean validate(Answer answer)
